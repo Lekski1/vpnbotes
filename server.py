@@ -45,8 +45,8 @@ if not TEST:
     # result = result.stdout + '\n\n' + result.stderr
     # if 'no such option' in result:
     commands = [
-    'pipx install flask==2.3.1',
-    'pipx install flask-httpauth==4.8.0',
+    'pip install flask==2.3.1 --break-system-packages',
+    'pip install flask-httpauth==4.8.0 --break-system-packages',
     ]
     for command in commands:
         result = run(command, shell = True, capture_output = True, encoding='cp866')
